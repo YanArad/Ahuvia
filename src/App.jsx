@@ -1,5 +1,6 @@
 import { ThemeProvider } from './context/ThemeContext';
 import DarkModeToggle from './components/DarkModeToggle/DarkModeToggle';
+import ChatBox from './components/ChatBox/ChatBox';
 import './index.css';
 
 export default function App() {
@@ -11,7 +12,7 @@ export default function App() {
           <DarkModeToggle />
         </header>
         <main className="app-content">
-          <p>Welcome! Use the toggle in the top-right corner to switch themes.</p>
+          <ChatBox />
         </main>
       </div>
     </ThemeProvider>

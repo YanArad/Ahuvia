@@ -1,0 +1,51 @@
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.checkbox {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+  background-color: #ccc;
+  border-radius: 13px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.slider::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.checkbox:checked + .slider {
+  background-color: #4f46e5;
+}
+
+.checkbox:checked + .slider::after {
+  transform: translateX(22px);
+}
+
+.checkbox:focus-visible + .slider {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
